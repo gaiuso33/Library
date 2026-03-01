@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <header class="header">
+        <h1>My Library</h1>
+        <button id="newBookBtn" class="primary">+ New Book</button>
+    </header>
+
+    <main class="main">
+        <section id="library" class="grid" aria-label="Books">
+
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <dialog id="bookDialog">
+    <form id="bookForm" method="dialog" class="form">
+        <h2>Add a new book</h2>
+
+        <label>
+            Title
+            <input name="title" type="text" required maxlength="80" />
+        </label>
+
+        <label>
+            Author
+            <input name="author" type="text" required maxlength="60" />
+        </label>
+
+        <label>
+            Pages
+            <input name="pages" type="number" min="1" required />
+        </label>
+
+        <label class="checkbox">
+            <input name="read" type="checkbox" />
+            Read already?
+        </label>
+
+        <div class="actions">
+            <button type="button" id="cancelBtn">Cancel</button>
+            <button type="submit" class="primary">Add Book</button>
+        </div>
+    </form>
+    </dialog>
 </body>
 </html>
