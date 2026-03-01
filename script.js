@@ -30,7 +30,7 @@ const dialog = document.querySelector("#bookDialog");
 const form = document.querySelector("#bookForm");
 const cancelBtn = document.querySelector("#cancelBtn");
 
-// Render function: UI is recreated from data (single source of truth)
+// Render function: UI is recreated from data
 function renderLibrary() {
   libraryEl.innerHTML = "";
 
@@ -119,7 +119,7 @@ addBookToLibrary({ title: "Eloquent JavaScript", author: "Marijn Haverbeke", pag
 renderLibrary();
 
 // ===== tiny helper =====
-// Stops users from injecting HTML into your page via form inputs
+// Stops users from injecting HTML into the page via form inputs
 function escapeHTML(str) {
     return String(str)
     .replaceAll("&", "&amp;")
