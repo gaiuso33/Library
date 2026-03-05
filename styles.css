@@ -1,33 +1,39 @@
-* { box-sizing: border-box; }
+* { 
+    box-sizing: border-box;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;}
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #f6f7fb;
-  color: #111;
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: #f6f7fb;
+    color: #111;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 20px;
-  background: white;
-  border-bottom: 1px solid #e6e7ee;
-  position: sticky;
-  top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background: white;
+    border-bottom: 1px solid #e6e7ee;
+    position: sticky;
+    top: 0;
 }
 
-.main { padding: 20px; }
+.main { 
+    padding: 20px; 
+}
 
 .primary {
-  border: none;
-  background: #2563eb;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 10px;
-  cursor: pointer;
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-.primary:hover { filter: brightness(0.95); }
+.primary:hover { 
+    filter: brightness(0.95); 
+}
 
 .grid {
   display: grid;
@@ -76,30 +82,32 @@ body {
 }
 
 .card button {
-  flex: 1;
-  border: 1px solid #e6e7ee;
-  background: #fff;
-  padding: 9px 10px;
-  border-radius: 10px;
-  cursor: pointer;
+    flex: 1;
+    border: 1px solid #e6e7ee;
+    background: #fff;
+    padding: 9px 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .card button:hover { 
     background: #f3f4f6; 
 }
 
 dialog {
-  border: none;
-  border-radius: 16px;
-  padding: 0;
-  width: min(420px, 92vw);
+    border: none;
+    border-radius: 16px;
+    padding: 0;
+    width: min(420px, 92vw);
 }
-dialog::backdrop { background: rgba(0,0,0,0.4); }
+dialog::backdrop { 
+    background: rgba(0,0,0,0.4); 
+}
 
 .form {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 .form h2 { 
     margin: 0 0 6px; }

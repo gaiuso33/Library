@@ -1,19 +1,19 @@
 // ===== Data =====
 const myLibrary = [];
 
-// Constructor
-function Book({ title, author, pages, read }) {
-  this.id = crypto.randomUUID(); // stable unique id
-  this.title = title;
-  this.author = author;
-  this.pages = Number(pages);
-  this.read = Boolean(read);
-}
+class Book {
+  constructor({ title, author, pages, read }) {
+    this.id = crypto.randomUUID(); // stable unique id
+    this.title = title;
+    this.author = author;
+    this.pages = Number(pages);
+    this.read = Boolean(read);
+  }
 
-// Prototype method to toggle read status
-Book.prototype.toggleRead = function () {
-  this.read = !this.read;
-};
+  toggleRead() {
+    this.read = !this.read;
+  }
+}
 
 // Helper: create + store in array
 function addBookToLibrary({ title, author, pages, read }) {
@@ -121,7 +121,7 @@ renderLibrary();
 // ===== tiny helper =====
 // Stops users from injecting HTML into your page via form inputs
 function escapeHTML(str) {
-    return String(str)
+  return String(str)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
